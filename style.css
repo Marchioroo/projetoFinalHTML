@@ -1,0 +1,116 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --gold: linear-gradient(135deg, #f0c27b, #4b1248);
+    --gold-1:linear-gradient(135deg, #f0c27b 0%, #f0c27b 50%, #e4a64a 100%);
+    --gold-normal:rgb(150, 134, 45);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    position: relative;
+}
+
+body {
+    font-family: 'Poppins';
+    
+}
+
+.img-top img{
+    width: 100%;
+
+}
+
+.menu {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    font-weight: 400;
+    font-size:17px;
+    width: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0) 10%, rgba(225, 228, 41, 0.7) 30%, rgba(179, 182, 9, 0.) 70%, rgba(248, 248, 248, 0) 90%);
+    height: auto;
+    box-sizing: border-box;
+    
+}
+
+.menu-item {
+ 
+    padding: 10px;
+    margin: 0px 10px;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color:rgb(43, 38, 38); 
+    font-weight: 600;
+    transition:  all .2s ease;
+
+    &:hover{
+        color:rgb(230, 214, 3);
+        border-bottom: 2px solid rgb(230, 214, 3);
+        box-shadow: 0 4px 8px rgba(255, 254, 254, 0.2);
+    }
+}
+#hok-logo {
+    position: absolute;
+    width: 30%;
+    top: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+#img-top{
+    display:flex;
+    position: relative;
+    width: 100%;
+    top:-100px;
+}
+
+.icons{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom:130px;
+    font-size: 35px;
+}
+.icons i{
+    margin:10px;
+
+}
+.qrcode-images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    bottom:300px;
+    width: 100%;
+ 
+
+}
+
+
+
+.qrcode #qr-1{
+    width: 20%;
+    padding:10px;
+    background-color: black;
+    border-radius:12px;
+    
+}
+.qrcode #qr-2{
+    width: 20%;
+    padding:5px;
+    background-color: black;
+    border-radius:12px;
+}
