@@ -28,6 +28,7 @@ body {
 
 .menu {
     position: fixed;
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,14 +36,15 @@ body {
     font-weight: 400;
     font-size:17px;
     width: 100%;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0) 10%, rgba(225, 228, 41, 0.7) 30%, rgba(179, 182, 9, 0.) 70%, rgba(248, 248, 248, 0) 90%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0) 10%, rgba(176, 185, 72, 0.7) 30%, rgba(176, 185, 72, 0.7) 70%, rgba(248, 248, 248, 0) 90%);
     height: auto;
     box-sizing: border-box;
+    
     
 }
 
 .menu-item {
- 
+    
     padding: 10px;
     margin: 0px 10px;
 }
@@ -54,8 +56,8 @@ body {
     transition:  all .2s ease;
 
     &:hover{
-        color:rgb(230, 214, 3);
-        border-bottom: 2px solid rgb(230, 214, 3);
+        color:white;
+        border-bottom:2px solid white;
         box-shadow: 0 4px 8px rgba(255, 254, 254, 0.2);
     }
 }
@@ -72,7 +74,7 @@ body {
     display:flex;
     position: relative;
     width: 100%;
-    top:-100px;
+    
 }
 
 .icons{
@@ -113,4 +115,70 @@ body {
     padding:5px;
     background-color: black;
     border-radius:12px;
+}
+
+.qrcode-icon{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:110px;
+    
+}
+
+.qrcode-icon img{
+    width: 150px;
+    margin:20px;
+   
+}
+.qrcode h3{
+    margin-bottom:20px;
+}
+
+#qrimg-1{
+    visibility: hidden;
+}
+#qrimg-2{
+    visibility: hidden;
+}
+
+#h1{
+position: relative;
+bottom:80px;
+}
+
+span #herois{
+    width: 100%;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+
+.box-filtros {
+    padding: 0;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    background-color: red;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center; 
+
+}
+
+.menu-inferior {
+    display: flex;
+    width: 100%;
+    justify-content: space-around; /* Espaça igualmente os itens */
+    list-style-type: none; /* Remove bullets */
+}
+
+.menu-inferior li {
+    display: flex;
+    padding: 10px;
 }
