@@ -2,9 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root{
-    --gold: linear-gradient(135deg, #f0c27b, #4b1248);
-    --gold-1:linear-gradient(135deg, #f0c27b 0%, #f0c27b 50%, #e4a64a 100%);
-    --gold-normal:rgb(150, 134, 45);
+    --gold-gradiant: linear-gradient(135deg, #f0c27b, #4b1248);
+    --gold-gradiant-2:linear-gradient(135deg, #f0c27b 0%, #f0c27b 50%, #e4a64a 100%);
+    --gold-normal:rgb(102, 88, 8);
+    --first: rgb(43, 38, 38);
+    --second: #fff; 
 }
 
 * {
@@ -36,7 +38,7 @@ body {
     font-weight: 400;
     font-size:17px;
     width: 100%;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0) 10%, rgba(176, 185, 72, 0.7) 30%, rgba(176, 185, 72, 0.7) 70%, rgba(248, 248, 248, 0) 90%);
+    /* background: linear-gradient(135deg, rgba(255, 255, 255, 0) 10%, rgba(176, 185, 72, 0.7) 30%, rgba(176, 185, 72, 0.7) 70%, rgba(248, 248, 248, 0) 90%); */
     height: auto;
     box-sizing: border-box;
     
@@ -51,13 +53,13 @@ body {
 
 .menu-item a {
     text-decoration: none;
-    color:rgb(43, 38, 38); 
+    color:var(--first);
     font-weight: 600;
     transition:  all .2s ease;
 
     &:hover{
-        color:white;
-        border-bottom:2px solid white;
+        color:#f0c27b;
+        border-bottom:2px solid #f0c27b;
         box-shadow: 0 4px 8px rgba(255, 254, 254, 0.2);
     }
 }
@@ -144,12 +146,11 @@ body {
 
 #h1{
 position: relative;
-bottom:80px;
+bottom:85px;
 }
 
 span #herois{
     width: 100%;
-  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -157,28 +158,122 @@ span #herois{
 }
 
 
+.text-aside {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ajuste conforme necessário */
+}
 
-
-.box-filtros {
-    padding: 0;
-    margin: 0 auto; /* Centraliza horizontalmente */
-    background-color: red;
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    text-align: center; 
-
+#img-fundo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Garante que a imagem ocupe 100% da altura */
+    z-index: -1; /* Coloca a imagem atrás do conteúdo */
+    object-fit: cover; /* Garante que a imagem cubra o contêiner sem distorcer */
 }
 
 .menu-inferior {
-    display: flex;
+    position: absolute;
+    bottom: 0;
     width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
     justify-content: space-around; /* Espaça igualmente os itens */
     list-style-type: none; /* Remove bullets */
+    margin: 0;
+    width: 100%;
+    
+    
+    
 }
+
 
 .menu-inferior li {
     display: flex;
-    padding: 10px;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    text-decoration: none; 
+    text-align: center;
+   
 }
+.menu-inferior li:hover{
+    background-image: url(img/HEROI-FUNDO.png);
+    height: 100%;
+color:white;
+    
+   
+}
+
+.menu-inferior a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    padding: 20px;
+    margin-top:20px;
+    
+}
+
+
+
+.img-redondo {
+    position: relative;
+    /* Ajuste conforme necessário */
+    float:right;
+    width: 40%;
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+.imagem-superior,
+.imagem-inferior {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: auto;
+}
+
+.imagem-superior {
+    z-index: 2; /* Coloca a imagem superior sobre a inferior */
+    position: relative;
+    
+}
+
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+  
+}
+
+
+    #video-player {
+        position: relative;
+        left: 30px;
+        z-index: 0;
+        top:30px;
+        width: 85%;
+        height: auto;
+        border-radius: 50%; /* Aplica um raio para o vídeo para o formato circular */
+        overflow: hidden; /* Garante que o vídeo circular seja exibido corretamente */
+      
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transições de opacidade e transformação */
+    
+    }
+
+
+
+    /* CSS para a animação de fade-in */
+
