@@ -73,12 +73,15 @@ ScrollReveal().reveal('#video-player', {
     distance: '20%'
 });
 
+ScrollReveal().reveal('#img-fundo1', {
+    origin: 'left',
+    duration: 1500,
+    distance: '20%'
+});
 
 
 
-// Seleciona os elementos de menu
-// Captura os elementos de menu e vídeo
-let todos = document.getElementById('todos');
+
 let topLink = document.getElementById('top');
 let adc = document.getElementById('adc');
 let mid = document.getElementById('mid');
@@ -86,63 +89,57 @@ let sup = document.getElementById('sup');
 let jun = document.getElementById('jun');
 let videoPlayer = document.getElementById('video-player');
 let videoSource = document.getElementById('video-source');
+let heroiImagem = document.getElementById('img-fundo1');
 
-// Adiciona ouvintes de evento para cada link de filtro
-todos.addEventListener('click', function(event) {
-    event.preventDefault(); // Evita o comportamento padrão de recarregar a página
-    trocarVideo('video/rota_do_meio.mp4');
-    videoPlayer.play();
-    
-});
+
+
 
 topLink.addEventListener('click', function(event) {
-    event.preventDefault(); // Evita o comportamento padrão de recarregar a página
-    trocarVideo('video/rota_do_meio.mp4');
+    event.preventDefault(); 
+    trocarVideo('video/rota_do_jungle.mp4', 'img/biron.png');
     videoPlayer.play();
-    ScrollReveal().reveal('#video-source', { delay: 500 });
-    ScrollReveal().reveal('#video-player', { delay: 500 });
 });
 
 adc.addEventListener('click', function(event) {
-    event.preventDefault(); // Evita o comportamento padrão de recarregar a página
-    trocarVideo('video/rota_do_jungle.mp4');
+    event.preventDefault(); 
+    trocarVideo('video/rota_do_adc.mp4', 'img/alessio.png');
     videoPlayer.play();
 });
 
 mid.addEventListener('click', function(event) {
-    event.preventDefault(); // Evita o comportamento padrão de recarregar a página
-    trocarVideo('video/rota_do_meio.mp4');
+    event.preventDefault(); 
+    trocarVideo('video/rota_do_meio.mp4', 'img/milady.png');
     videoPlayer.play();
 });
 
 sup.addEventListener('click', function(event) {
-    event.preventDefault(); // Evita o comportamento padrão de recarregar a página
-    trocarVideo('video/rota_do_meio.mp4');
+    event.preventDefault(); 
+    trocarVideo('video/rota_do_suporte.mp4','img/dolia.png');
     videoPlayer.play();
 });
 
 jun.addEventListener('click', function(event) {
-    event.preventDefault(); // Evita o comportamento padrão de recarregar a página
-    trocarVideo('video/rota_do_meio.mp4');
+    event.preventDefault(); 
+    trocarVideo('video/rota_do_jungle.mp4','img/lam.png');
     videoPlayer.play();
 });
 
-// Função para trocar o vídeo
-// Função para trocar o vídeo
-function trocarVideo(source) {
-    // Oculta o vídeo atual suavemente
-   
+
+function trocarVideo(source,img) {
+  
+    videoPlayer.style.opacity = 0;
+    heroiImagem.style.opacity = 0;
     
-    // Aguarda um curto período para a transição ocorrer
+   
     setTimeout(() => {
-        videoSource.src = source; // Altera a origem do vídeo
-        videoPlayer.load(); // Recarrega o vídeo com a nova origem
-        videoPlayer.play(); // Inicia a reprodução do vídeo automaticamente
-        
-        
-        // Exibe o novo vídeo suavemente
-        
-    }, 500); // Tempo deve corresponder ao tempo de transição CSS
+        videoSource.src = source; 
+        videoPlayer.load(); 
+        videoPlayer.play(); 
+        heroiImagem.src = img;
+        videoPlayer.style.opacity = 1;
+        heroiImagem.style.opacity = 1;
+       
+    }, 500); 
    
 }
 

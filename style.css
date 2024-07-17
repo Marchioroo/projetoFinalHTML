@@ -161,18 +161,20 @@ span #herois{
 .text-aside {
     position: relative;
     width: 100%;
-    height: 100vh; /* Ajuste conforme necessário */
+    bottom:100px;
+    height: 100vh; 
 }
 
-#img-fundo {
+#img-fundo, #img-fundo1 {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; /* Garante que a imagem ocupe 100% da altura */
-    z-index: -1; /* Coloca a imagem atrás do conteúdo */
-    object-fit: cover; /* Garante que a imagem cubra o contêiner sem distorcer */
+    height: 100%; 
+    z-index: -1; 
+    object-fit: cover; 
 }
+
 
 .menu-inferior {
     position: absolute;
@@ -181,8 +183,8 @@ span #herois{
     height: 120px;
     display: flex;
     align-items: center;
-    justify-content: space-around; /* Espaça igualmente os itens */
-    list-style-type: none; /* Remove bullets */
+    justify-content: space-around; 
+    list-style-type: none; 
     margin: 0;
     width: 100%;
     
@@ -199,7 +201,7 @@ span #herois{
     text-align: center;
     display: flex;
     align-items: center;
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    justify-content: center;
     text-decoration: none; 
     text-align: center;
    
@@ -226,23 +228,24 @@ color:white;
 
 .img-redondo {
     position: relative;
-    /* Ajuste conforme necessário */
+    
     float:right;
     width: 40%;
-    margin: 0 auto; /* Centraliza horizontalmente */
+    margin: 0 auto; 
 }
 
 .imagem-superior,
 .imagem-inferior {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     height: auto;
 }
 
 .imagem-superior {
-    z-index: 2; /* Coloca a imagem superior sobre a inferior */
+    z-index: 2; 
     position: relative;
+    width: 94%;
     
 }
 
@@ -266,14 +269,15 @@ color:white;
         top:30px;
         width: 85%;
         height: auto;
-        border-radius: 50%; /* Aplica um raio para o vídeo para o formato circular */
-        overflow: hidden; /* Garante que o vídeo circular seja exibido corretamente */
-      
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Transições de opacidade e transformação */
+        border-radius: 50%; 
+        overflow: hidden; 
+        transition: opacity 0.5s ease, transform 0.5s ease;
     
     }
 
 
-
-    /* CSS para a animação de fade-in */
+    #videoPlayer, #thumbnail {
+        transition: all opacity 0.5s ease; 
+        opacity: 1; 
+      }
 
